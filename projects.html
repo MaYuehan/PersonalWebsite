@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Product Manager & Frontend Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#0EA5E9', // Sky 500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-heading text-slate-900 tracking-tight">
+                        Dev<span class="text-primary">PM</span>.
+                    </a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-slate-500 hover:text-primary transition font-medium">Home</a>
+                    <a href="about.html" class="text-slate-500 hover:text-primary transition font-medium">About</a>
+                    <a href="projects.html" class="text-primary font-medium border-b-2 border-primary pb-1">Projects</a>
+                    <a href="contact.html" class="text-slate-500 hover:text-primary transition font-medium">Contact</a>
+                    <a href="components.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-slate-900 hover:bg-primary transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200">
+                        Design System
+                    </a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-slate-900 focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-indigo-50">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Contact</a>
+                <a href="components.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Design System</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-16 reveal active">
+            <h1 class="text-4xl font-extrabold text-slate-900 sm:text-5xl font-heading mb-4">Selected Work</h1>
+            <p class="max-w-xl mx-auto text-xl text-slate-500">
+                A mix of product management case studies and frontend development projects.
+            </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex justify-center flex-wrap gap-4 mb-16 reveal delay-100">
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-primary text-white hover:bg-indigo-700" data-filter="all">
+                All Projects
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="product">
+                Product Management
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="dev">
+                Development
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="design">
+                UI/UX Design
+            </button>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Project Card 1 (Product) -->
+            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-100" data-category="product">
+                <div class="relative overflow-hidden">
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
+                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="SaaS Dashboard Strategy">
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-indigo-600 shadow-sm uppercase tracking-wide">Product</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">SaaS Analytics Dashboard</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Led the product strategy and roadmap for a new analytics dashboard, resulting in a 25% increase in user engagement.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Strategy</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">User Research</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Figma</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
+                        View Case Study <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 (Dev) -->
+            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-200" data-category="dev">
+                <div class="relative overflow-hidden">
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
+                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce Platform">
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-sky-600 shadow-sm uppercase tracking-wide">Dev</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">E-commerce React App</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Built a performant e-commerce frontend using React, Redux, and Tailwind CSS with Stripe integration.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">React</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Redux</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Tailwind</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
+                        View Code <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 (Design) -->
+            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-300" data-category="design">
+                <div class="relative overflow-hidden">
+                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
+                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobile App Design">
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-pink-600 shadow-sm uppercase tracking-wide">Design</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">Fintech App UI Kit</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Designed a comprehensive UI kit and design system for a mobile banking application.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Figma</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Prototyping</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Design Systems</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
+                        View Design <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-slate-400">&copy; 2024 [Your Name]. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
