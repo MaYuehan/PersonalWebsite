@@ -15,8 +15,21 @@
                         heading: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#4F46E5', // Indigo 600
-                        secondary: '#0EA5E9', // Sky 500
+                        primary: '#6b0ba9', // Purple
+                        secondary: '#d1bbfe', // Light Purple
+                        accent: '#f7dadb', // Pinkish
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
                     }
                 }
             }
@@ -65,14 +78,14 @@
         <div class="grid lg:grid-cols-2 gap-16 items-start">
             
             <!-- Left Column: Image & Bio -->
-            <div class="reveal active">
+            <div class="space-y-12 reveal active">
                 <div class="relative mb-12">
-                    <div class="absolute inset-0 bg-indigo-200 rounded-3xl transform rotate-3 translate-x-2 translate-y-2"></div>
+                    <div class="absolute inset-0 bg-secondary rounded-3xl transform rotate-3 translate-x-2 translate-y-2"></div>
                     <img class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]" src="images/me.jpg" alt="Profile picture">
                 </div>
 
                 <div class="prose prose-lg text-slate-600">
-                    <h2 class="text-3xl font-bold font-heading text-slate-900 mb-6">Hello, I'm [Your Name].</h2>
+                    <h2 class="text-3xl font-bold font-heading text-slate-900 mb-6">Hello, I'm Ma Yuehan.</h2>
                     <p class="mb-4">
                         I sit at the intersection of <strong>Product Management</strong>, <strong>Design</strong>, and <strong>Engineering</strong>. I believe that understanding how software is built makes me a better Product Manager, and understanding user needs makes me a better Developer.
                     </p>
@@ -80,6 +93,46 @@
                         With over 5 years of experience in the tech industry, I've helped startups launch their first MVPs and enterprise companies scale their digital products.
                     </p>
                 </div>
+
+                <!-- Projects section: dedicated About page START -->
+                <section class="section-item">
+                    <div class="mb-24 reveal section-item text-center">
+                        <div class="bg-primary rounded-3xl p-12 text-white shadow-xl max-w-4xl mx-auto relative overflow-hidden">
+                            <!-- Decorative Background -->
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+                            <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full -ml-16 -mb-16 blur-3xl"></div>
+                            
+                            <div class="relative z-10">
+                                <h3 class="text-3xl font-bold font-heading mb-4">Projects</h3>
+                                <p class="text-purple-100 text-lg mb-8 max-w-2xl mx-auto">
+                                    Explore my portfolio of product case studies, design prototypes, and development projects.
+                                </p>
+                                <a href="projects.html" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-lg hover:shadow-xl hover:bg-slate-50 transition-all transform hover:-translate-y-1">
+                                    View My Projects
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Projects section: dedicated About page END -->
+
+                <!-- Contact section: dedicated About page START -->
+                <section class="section-item">
+                    <div class="bg-white reveal rounded-2xl p-8 shadow-sm border border-slate-100">
+                        <h3 class="text-2xl font-bold font-heading text-slate-900 mb-4">Get in Touch</h3>
+                        <p class="text-slate-600 mb-6">
+                            Always open to opportunities and conversations around product, design, and frontend.
+                        </p>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-xl shadow-sm hover:shadow-md hover:bg-indigo-700 transition-all">
+                            Contact Me
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <!-- Contact section: dedicated About page END -->
             </div>
 
             <!-- Right Column: Skills & Experience -->
@@ -143,7 +196,7 @@
                         
                         <!-- TRINAX -->
                         <div class="relative pl-10">
-                            <div class="absolute left-0 top-2 h-6 w-6 rounded-full border-4 border-white bg-[#f7dadb] shadow-md"></div>
+                            <div class="absolute left-0 top-2 h-6 w-6 rounded-full border-4 border-white bg-[#6b0ba9] shadow-md"></div>
                             <h4 class="text-lg font-bold text-slate-900">Software Developer Intern</h4>
                             <p class="text-primary text-sm font-medium mb-2">TRINAX Private Limited • May 2025 – Aug 2025</p>
                             <ul class="text-slate-600 text-sm leading-relaxed list-disc list-inside ml-2 space-y-1">
@@ -167,7 +220,7 @@
 
                         <!-- YUMMIA -->
                         <div class="relative pl-10">
-                            <div class="absolute left-0 top-2 h-6 w-6 rounded-full border-4 border-white bg-[#6b0ba9] shadow-md"></div>
+                            <div class="absolute left-0 top-2 h-6 w-6 rounded-full border-4 border-white bg-[#f7dadb] shadow-md"></div>
                             <h4 class="text-lg font-bold text-slate-900">Team Lead</h4>
                             <p class="text-primary text-sm font-medium mb-2">YUMMIA • Aug 2024 – Nov 2024</p>
                             <ul class="text-slate-600 text-sm leading-relaxed list-disc list-inside ml-2 space-y-1">
@@ -191,9 +244,6 @@
 
                     </div>
                 </div>
-
-
-
 
 
 
