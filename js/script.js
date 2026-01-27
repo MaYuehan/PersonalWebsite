@@ -92,4 +92,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Contact Form Placeholder - REMOVED
 
+    // 6. Focus/Blur Effect for About Sections
+    const aboutSections = document.querySelectorAll('.section-item');
+    const aboutContainer = document.getElementById('about-content');
+    
+    if (aboutSections.length > 0 && aboutContainer) {
+        const focusObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If section is more than 40% visible, it's the "active" one
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-active');
+                } else {
+                    entry.target.classList.remove('section-active');
+                }
+            });
+
+            // Check if any section is active to enable focus mode on container
+            // If active, non-active siblings will fade out via CSS
+            const anyActive = document.querySelectorAll('.section-active').length > 0;
+            if (anyActive) {
+                aboutContainer.classList.add('focus-mode-active');
+            } else {
+                aboutContainer.classList.remove('focus-mode-active');
+            }
+
+        }, {
+            root: null,
+            threshold: 0.4, // 40% visibility triggers focus
+            rootMargin: "-10% 0px -10% 0px" // Shrink view slightly to focus on center
+        });
+
+        aboutSections.forEach(section => focusObserver.observe(section));
+    }
+
 });

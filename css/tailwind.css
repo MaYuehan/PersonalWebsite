@@ -36,6 +36,36 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
 }
 
+/* 
+   Focus/Blur Effect for About Sections 
+   - Non-active sections fade out and blur slightly
+   - Active section remains crisp
+*/
+.focus-mode-active .section-item {
+    opacity: 0.3;
+    filter: blur(1px);
+    transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+
+.focus-mode-active .section-item.section-active {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Disable effects for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .focus-mode-active .section-item {
+        opacity: 1 !important;
+        filter: none !important;
+        transition: none !important;
+    }
+    .reveal {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /* Staggered delays for children if needed */
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
