@@ -90,23 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Contact Form Placeholder
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
+    // 5. Contact Form Placeholder - REMOVED
 
-            setTimeout(() => {
-                alert('Message sent successfully! (Demo)');
-                contactForm.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }, 1500);
-        });
-    }
 });
