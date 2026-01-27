@@ -15,8 +15,21 @@
                         heading: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#4F46E5', // Indigo 600
-                        secondary: '#0EA5E9', // Sky 500
+                        primary: '#6b0ba9', // Purple
+                        secondary: '#d1bbfe', // Light Purple
+                        accent: '#f7dadb', // Pinkish
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
                     }
                 }
             }
@@ -36,7 +49,7 @@
                 </div>
                 <div class="hidden md:flex md:items-center md:space-x-8">
                     <a href="index.html" class="text-slate-500 hover:text-primary transition font-medium">Home</a>
-                    <a href="about.html" class="text-slate-500 hover:text-primary transition font-medium">About</a>
+                    <a href="index.html#about" class="text-slate-500 hover:text-primary transition font-medium">About</a>
                     <a href="projects.html" class="text-primary font-medium border-b-2 border-primary pb-1">Projects</a>
                     <a href="contact.html" class="text-slate-500 hover:text-primary transition font-medium">Contact</a>
                     <a href="components.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-slate-900 hover:bg-primary transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200">
@@ -55,7 +68,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
             <div class="px-4 pt-4 pb-6 space-y-2">
                 <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
+                <a href="index.html#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
                 <a href="projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-indigo-50">Projects</a>
                 <a href="contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Contact</a>
                 <a href="components.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Design System</a>
@@ -64,99 +77,129 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+        <!-- Page Header -->
         <div class="text-center mb-16 reveal active">
-            <h1 class="text-4xl font-extrabold text-slate-900 sm:text-5xl font-heading mb-4">Selected Work</h1>
-            <p class="max-w-xl mx-auto text-xl text-slate-500">
-                A mix of product management case studies and frontend development projects.
+            <h1 class="text-4xl font-extrabold text-slate-900 sm:text-5xl font-heading mb-4">Projects</h1>
+            <p class="max-w-2xl mx-auto text-xl text-slate-500">
+                Selected work in product design, user research, and development
             </p>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="flex justify-center flex-wrap gap-4 mb-16 reveal delay-100">
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-primary text-white hover:bg-indigo-700" data-filter="all">
-                All Projects
-            </button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="product">
-                Product Management
-            </button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="dev">
-                Development
-            </button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-sm bg-white text-slate-600 hover:bg-slate-50 border border-slate-200" data-filter="design">
-                UI/UX Design
-            </button>
-        </div>
+        <div class="space-y-24">
+            <!-- PROJECT 1: FlowZone -->
+            <!-- UPDATE HERE: Project 1 Content -->
+            <section class="group relative bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden reveal delay-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <!-- Image Placeholder -->
+                    <div class="relative h-64 md:h-auto bg-slate-200 overflow-hidden">
+                        <!-- REPLACE IMAGE HERE: Add your VR screenshots -->
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
+                            <span class="text-sm font-medium uppercase tracking-widest">VR Project Image Placeholder</span>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-primary/90 text-white rounded-full text-xs font-bold shadow-sm uppercase tracking-wide">VR / Unity</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 md:p-10 flex flex-col justify-center">
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2 group-hover:text-primary transition-colors">FlowZone</h2>
+                            <p class="text-sm text-primary font-semibold mb-1">Unity Developer | Feb 2025 – May 2025</p>
+                            <p class="text-sm text-slate-500 italic">Real-Time VR Yoga & Meditation Application</p>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-6 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                            <li>Designed and developed a VR prototype integrating real-time pose tracking and guided mindfulness meditation, aligning features with user needs around immersion, accuracy, and stress reduction (team of five).</li>
+                            <li>Built immersive, nature-inspired virtual environments to support focus and relaxation; tested with 20+ users and achieved an average satisfaction rating of 4.3/5.</li>
+                            <li>Applied user research insights to prioritize environment aesthetics and onboarding experience, reducing beginner errors by 30% and increasing engagement.</li>
+                            <li>Led small-scale user testing and iteration; insights contributed to an academic paper published at ACM VRST 2025.</li>
+                        </ul>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Project Card 1 (Product) -->
-            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-100" data-category="product">
-                <div class="relative overflow-hidden">
-                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
-                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="SaaS Dashboard Strategy">
-                    <div class="absolute top-4 right-4 z-20">
-                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-indigo-600 shadow-sm uppercase tracking-wide">Product</span>
+                        <div class="mt-auto">
+                            <a href="https://dl.acm.org/doi/10.1145/3756884.3770544" target="_blank" class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-indigo-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                                ACM VRST 2025 Publication
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">SaaS Analytics Dashboard</h3>
-                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Led the product strategy and roadmap for a new analytics dashboard, resulting in a 25% increase in user engagement.</p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Strategy</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">User Research</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Figma</span>
-                    </div>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
-                        View Case Study <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
-            </div>
+            </section>
 
-            <!-- Project Card 2 (Dev) -->
-            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-200" data-category="dev">
-                <div class="relative overflow-hidden">
-                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
-                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce Platform">
-                    <div class="absolute top-4 right-4 z-20">
-                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-sky-600 shadow-sm uppercase tracking-wide">Dev</span>
+            <!-- PROJECT 2: YUMMIA -->
+            <!-- UPDATE HERE: Project 2 Content -->
+            <section class="group relative bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden reveal delay-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div class="grid md:grid-cols-2 gap-0 md:flex-row-reverse">
+                    <!-- Content (Left on Desktop for visual interest, but we keep consistent layout or alternate? User asked for clean scannable layout. Let's keep image on left or top for mobile consistency, or alternate. Alternating is nice for storytelling.) -->
+                    <!-- Let's keep consistent Layout for scannability as requested "Clean, scannable layout for recruiters" usually implies consistency. -->
+                    
+                    <!-- Image Placeholder -->
+                    <div class="relative h-64 md:h-auto bg-slate-200 overflow-hidden md:order-last">
+                        <!-- REPLACE IMAGE HERE: Add YUMMIA app screenshots -->
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
+                            <span class="text-sm font-medium uppercase tracking-widest">App Interface Placeholder</span>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-accent text-slate-800 rounded-full text-xs font-bold shadow-sm uppercase tracking-wide">Product / UX</span>
+                        </div>
                     </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">E-commerce React App</h3>
-                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Built a performant e-commerce frontend using React, Redux, and Tailwind CSS with Stripe integration.</p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">React</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Redux</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Tailwind</span>
-                    </div>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
-                        View Code <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Project Card 3 (Design) -->
-            <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 reveal delay-300" data-category="design">
-                <div class="relative overflow-hidden">
-                    <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-all duration-500 z-10"></div>
-                    <img class="h-56 w-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mobile App Design">
-                    <div class="absolute top-4 right-4 z-20">
-                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-pink-600 shadow-sm uppercase tracking-wide">Design</span>
+                    <!-- Content -->
+                    <div class="p-8 md:p-10 flex flex-col justify-center">
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2 group-hover:text-primary transition-colors">YUMMIA</h2>
+                            <p class="text-sm text-primary font-semibold mb-1">Team Lead | Aug 2024 – Nov 2024</p>
+                            <p class="text-sm text-slate-500 italic">Diet-Focused Social Community Application</p>
+                        </div>
+
+                        <ul class="space-y-3 mb-6 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                            <li>Led user research and defined core product requirements, prioritizing nutrition tracking, community interaction, and meal recommendations to maximize user value.</li>
+                            <li>Planned and coordinated team workflows, organizing weekly meetings to align goals, resolve challenges, and deliver 100% of milestones on schedule.</li>
+                            <li>Designed and iterated a user-friendly prototype through usability testing, with 75% of test users reporting positive feedback on intuitiveness and overall experience.</li>
+                        </ul>
+
+                        <div class="mt-auto">
+                            <a href="https://yummia.wixsite.com/yummia" target="_blank" class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-indigo-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                                View Project Website
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3 group-hover:text-primary transition-colors">Fintech App UI Kit</h3>
-                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Designed a comprehensive UI kit and design system for a mobile banking application.</p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Figma</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Prototyping</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">Design Systems</span>
+            </section>
+
+            <!-- PROJECT 3: NUS Flea Market -->
+            <!-- UPDATE HERE: Project 3 Content -->
+            <section class="group relative bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden reveal delay-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <!-- Image Placeholder -->
+                    <div class="relative h-64 md:h-auto bg-slate-200 overflow-hidden">
+                        <!-- REPLACE IMAGE HERE: Add iOS app screenshots -->
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100">
+                            <span class="text-sm font-medium uppercase tracking-widest">Mobile App Placeholder</span>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-slate-800 text-white rounded-full text-xs font-bold shadow-sm uppercase tracking-wide">iOS / Swift</span>
+                        </div>
                     </div>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-indigo-800 transition">
-                        View Design <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    
+                    <!-- Content -->
+                    <div class="p-8 md:p-10 flex flex-col justify-center">
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2 group-hover:text-primary transition-colors">NUS Flea Market</h2>
+                            <p class="text-sm text-primary font-semibold mb-1">iOS Developer / Project Lead | May 2023 – Aug 2023</p>
+                            <p class="text-sm text-slate-500 italic">Second-hand trading app for NUS students (Orbital)</p>
+                        </div>
+
+                        <ul class="space-y-3 mb-6 text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4">
+                            <li>Developed an iOS application using Swift to facilitate second-hand trading, translating student pain points into MVP features.</li>
+                            <li>Self-taught Swift in 2 weeks and built a functional prototype with intuitive core flows, generating strong interest among test users.</li>
+                            <li>Led weekly team meetings to coordinate tasks, troubleshoot issues, and make product decisions on feature prioritization and workflow.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 

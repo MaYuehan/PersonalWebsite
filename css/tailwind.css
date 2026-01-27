@@ -40,6 +40,21 @@ h1, h2, h3, h4, h5, h6 {
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {

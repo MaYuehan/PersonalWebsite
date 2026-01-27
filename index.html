@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Product Manager & Frontend Dev</title>
+    <title>Yuehan | Product Manager & Frontend Dev</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS -->
@@ -17,8 +17,21 @@
                         heading: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#4F46E5', // Indigo 600
-                        secondary: '#0EA5E9', // Sky 500
+                        primary: '#6b0ba9', // Purple
+                        secondary: '#d1bbfe', // Light Purple
+                        accent: '#f7dadb', // Pinkish
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
                     }
                 }
             }
@@ -32,20 +45,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold font-heading text-slate-900 tracking-tight">
-                        Dev<span class="text-primary">PM</span>.
+                    <a href="#" class="text-2xl font-bold font-heading text-slate-900 tracking-tight">
+                        Yuehan<span class="text-primary">.</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="index.html" class="text-primary font-medium border-b-2 border-primary pb-1">Home</a>
-                    <a href="about.html" class="text-slate-500 hover:text-primary transition font-medium">About</a>
+                    <a href="#" class="text-primary font-medium border-b-2 border-primary pb-1">Home</a>
+                    <a href="#about" class="text-slate-500 hover:text-primary transition font-medium">About</a>
                     <a href="projects.html" class="text-slate-500 hover:text-primary transition font-medium">Projects</a>
                     <a href="contact.html" class="text-slate-500 hover:text-primary transition font-medium">Contact</a>
-                    <a href="components.html" class="px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-slate-900 hover:bg-primary transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5 duration-200">
-                        Design System
-                    </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -62,125 +72,176 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
             <div class="px-4 pt-4 pb-6 space-y-2">
-                <a href="index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-indigo-50">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
+                <a href="#" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-accent/20">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
                 <a href="projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Projects</a>
                 <a href="contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Contact</a>
-                <a href="components.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Design System</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow pt-20">
-        <!-- Hero Section -->
-        <section class="relative overflow-hidden min-h-[90vh] flex items-center">
+    <main class="flex-grow">
+        
+        <!-- Hero Section (100vh) -->
+        <section class="relative h-screen flex flex-col justify-center items-center overflow-hidden bg-slate-50">
             <!-- Background Decoration -->
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-indigo-100 blur-3xl opacity-50"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-sky-100 blur-3xl opacity-50"></div>
+            <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-secondary/30 blur-3xl opacity-50 animate-pulse"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-accent/40 blur-3xl opacity-50 animate-pulse" style="animation-delay: 1s;"></div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-                <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+            <div class="z-10 text-center px-4 max-w-4xl mx-auto reveal active">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 font-heading mb-6 tracking-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Yuehan</span>
+                </h1>
+                <!-- UPDATE HERE: Hero Subheading -->
+                <p class="text-xl md:text-2xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed">
+                    Aspiring Product Manager with a Computer Science background, emphasizing user-centered product development and technical fluency.
+                </p>
+            </div>
+
+            <!-- Scroll Down CTA -->
+            <div class="absolute bottom-10 left-0 right-0 flex justify-center reveal delay-500">
+                <a href="#about" class="flex flex-col items-center group cursor-pointer animate-float">
+                    <span class="text-sm font-medium text-slate-500 mb-2 tracking-widest uppercase group-hover:text-primary transition-colors">Swipe down to know more about me</span>
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen py-24 relative bg-white flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
                     
-                    <!-- Text Content -->
-                    <div class="lg:col-span-7 text-center lg:text-left reveal active">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-primary text-sm font-semibold mb-6">
-                            <span class="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-                            Available for new opportunities
+                    <!-- Left Column: Bio & Skills -->
+                    <div class="space-y-12 reveal">
+                        <div>
+                            <h2 class="text-3xl font-bold font-heading text-slate-900 mb-6 flex items-center">
+                                <span class="w-12 h-1 bg-primary rounded-full mr-4"></span>
+                                About Me
+                            </h2>
+                            <div class="prose prose-lg text-slate-600 leading-relaxed">
+                                <p class="mb-4">
+                                    I sit at the intersection of <strong>Product Management</strong>, <strong>Design</strong>, and <strong>Engineering</strong>. I believe that understanding how software is built makes me a better Product Manager, and understanding user needs makes me a better Developer.
+                                </p>
+                                <p>
+                                    With over 5 years of experience in the tech industry, I've helped startups launch their first MVPs and enterprise companies scale their digital products.
+                                </p>
+                            </div>
                         </div>
-                        <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl font-heading mb-6 leading-tight">
-                            Bridging the gap between <br class="hidden lg:block">
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Product & Code</span>
-                        </h1>
-                        <p class="mt-4 text-lg text-slate-600 sm:max-w-xl sm:mx-auto md:text-xl lg:mx-0 leading-relaxed">
-                            I'm <span class="font-semibold text-slate-900">[Your Name]</span>, a Product Manager with a developer's mindset. I specialize in building user-centric digital products with clean code and intuitive design.
-                        </p>
+
+                        <!-- Skills -->
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                            <h3 class="text-xl font-bold font-heading text-slate-900 mb-6">Technical Skills</h3>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Product & Design</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium shadow-sm">Product Strategy</span>
+                                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium shadow-sm">User Research</span>
+                                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium shadow-sm">Figma</span>
+                                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium shadow-sm">Agile/Scrum</span>
+                                    <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium shadow-sm">A/B Testing</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Development</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-secondary/20 text-primary border border-secondary/30 rounded-full text-sm font-medium shadow-sm">HTML5 & CSS3</span>
+                                    <span class="px-3 py-1 bg-secondary/20 text-primary border border-secondary/30 rounded-full text-sm font-medium shadow-sm">JavaScript (ES6+)</span>
+                                    <span class="px-3 py-1 bg-secondary/20 text-primary border border-secondary/30 rounded-full text-sm font-medium shadow-sm">React.js</span>
+                                    <span class="px-3 py-1 bg-secondary/20 text-primary border border-secondary/30 rounded-full text-sm font-medium shadow-sm">Tailwind CSS</span>
+                                    <span class="px-3 py-1 bg-secondary/20 text-primary border border-secondary/30 rounded-full text-sm font-medium shadow-sm">Git/GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Experience & CTA -->
+                    <div class="space-y-12 reveal delay-200">
                         
-                        <div class="mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
-                            <div class="reveal delay-100">
-                                <a href="projects.html" class="w-full sm:w-auto flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl text-white bg-primary hover:bg-indigo-700 md:text-lg transition-all shadow-lg hover:shadow-indigo-200 hover:-translate-y-1">
-                                    View Projects
-                                </a>
-                            </div>
-                            <div class="mt-3 sm:mt-0 reveal delay-200">
-                                <a href="contact.html" class="w-full sm:w-auto flex items-center justify-center px-8 py-4 border border-slate-200 text-base font-medium rounded-xl text-slate-700 bg-white hover:bg-slate-50 hover:text-primary md:text-lg transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
-                                    Contact Me
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Tech Stack Pills -->
-                        <div class="mt-12 pt-8 border-t border-slate-200 reveal delay-300">
-                            <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Core Competencies</p>
-                            <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-                                <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm text-slate-600 shadow-sm">Product Strategy</span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm text-slate-600 shadow-sm">Frontend Dev</span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm text-slate-600 shadow-sm">UI/UX Design</span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-sm text-slate-600 shadow-sm">Agile/Scrum</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hero Image -->
-                    <div class="lg:col-span-5 mt-12 lg:mt-0 relative reveal delay-200">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10"></div>
-                            <img class="w-full h-auto object-cover" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Product Manager working">
-                        </div>
-                        <!-- Floating Card -->
-                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl z-20 max-w-xs animate-bounce" style="animation-duration: 3s;">
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-green-100 rounded-lg">
-                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <!-- Experience Timeline -->
+                        <div class="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                            <h3 class="text-2xl font-bold font-heading text-slate-900 mb-8">Experience</h3>
+                            
+                            <div class="space-y-10 border-l-2 border-slate-100 pl-8 ml-3">
+                                <!-- UPDATE HERE: Experience & Projects -->
+                                
+                                <!-- TRINAX -->
+                                <div class="relative group">
+                                    <div class="absolute -left-[43px] top-1 h-6 w-6 rounded-full border-4 border-white bg-primary shadow-md group-hover:scale-110 transition-transform"></div>
+                                    <h4 class="text-lg font-bold text-slate-900">Software Developer Intern</h4>
+                                    <p class="text-primary text-sm font-medium mb-2">TRINAX Private Limited • May 2025 – Aug 2025</p>
+                                    <ul class="text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4 space-y-1">
+                                        <li>Built real-world, client-facing digital products focusing on frontend UX.</li>
+                                        <li>Mastered Svelte in 2 weeks to contribute effectively to ongoing projects.</li>
+                                        <li>Collaborated with cross-functional teams to deliver client solutions.</li>
+                                    </ul>
                                 </div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Latest Achievement</p>
-                                    <p class="text-sm font-bold text-slate-900">Launched MVP in 3 months</p>
+
+                                <!-- FlowZone -->
+                                <div class="relative group">
+                                    <div class="absolute -left-[43px] top-1 h-6 w-6 rounded-full border-4 border-white bg-secondary shadow-md group-hover:scale-110 transition-transform"></div>
+                                    <h4 class="text-lg font-bold text-slate-900">Unity Developer (VR Project)</h4>
+                                    <p class="text-slate-500 text-sm font-medium mb-2">FlowZone • Feb 2025 – May 2025</p>
+                                    <ul class="text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4 space-y-1">
+                                        <li>Developed a VR Yoga & Meditation app published at ACM VRST 2025.</li>
+                                        <li>Conducted user research to prioritize features for immersive relaxation.</li>
+                                        <li>Achieved measurable impact with high user satisfaction and reduced errors.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- YUMMIA -->
+                                <div class="relative group">
+                                    <div class="absolute -left-[43px] top-1 h-6 w-6 rounded-full border-4 border-white bg-accent shadow-md group-hover:scale-110 transition-transform"></div>
+                                    <h4 class="text-lg font-bold text-slate-900">Team Lead</h4>
+                                    <p class="text-slate-500 text-sm font-medium mb-2">YUMMIA • Aug 2024 – Nov 2024</p>
+                                    <ul class="text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4 space-y-1">
+                                        <li>Led a team to build a diet-focused social community app from scratch.</li>
+                                        <li>Defined product requirements and led usability testing cycles.</li>
+                                        <li>Coordinated milestones to ensure timely delivery of key features.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- NUS Flea Market -->
+                                <div class="relative group">
+                                    <div class="absolute -left-[43px] top-1 h-6 w-6 rounded-full border-4 border-white bg-slate-300 shadow-md group-hover:scale-110 transition-transform"></div>
+                                    <h4 class="text-lg font-bold text-slate-900">iOS Developer / Project Lead</h4>
+                                    <p class="text-slate-500 text-sm font-medium mb-2">NUS Flea Market • May 2023 – Aug 2023</p>
+                                    <ul class="text-slate-600 text-sm leading-relaxed list-disc list-outside ml-4 space-y-1">
+                                        <li>Led development of a second-hand trading app for NUS students.</li>
+                                        <li>Translated user pain points into prioritized MVP features.</li>
+                                        <li>Self-taught Swift to build and launch the iOS application.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- CTA -->
+                        <div class="bg-gradient-to-r from-primary to-purple-700 rounded-2xl p-8 text-white shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <h3 class="text-2xl font-bold font-heading mb-3">Ready to see my work?</h3>
+                            <p class="text-purple-100 mb-6">Check out my portfolio of product case studies and development projects.</p>
+                            <a href="projects.html" class="inline-flex items-center px-6 py-3 bg-white text-primary font-bold rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition-all">
+                                View My Projects
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Brief About Section (Optional Teaser) -->
-        <section class="py-24 bg-white reveal">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold font-heading text-slate-900 mb-6">Designed for clarity, built for performance.</h2>
-                    <p class="text-xl text-slate-600 leading-relaxed">
-                        I believe the best products are born at the intersection of engineering constraints, user needs, and business goals.
-                    </p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-center md:text-left">
-                    <h3 class="text-xl font-bold text-white font-heading">Dev<span class="text-primary">PM</span>.</h3>
-                    <p class="mt-2 text-sm text-slate-400">&copy; 2024 [Your Name]. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-slate-400 hover:text-white transition transform hover:scale-110">
-                        <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-                    </a>
-                    <a href="#" class="text-slate-400 hover:text-white transition transform hover:scale-110">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
-                    </a>
-                    <a href="#" class="text-slate-400 hover:text-white transition transform hover:scale-110">
-                         <span class="sr-only">Twitter</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
-                    </a>
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <p>&copy; 2024 Yuehan. All rights reserved.</p>
         </div>
     </footer>
 
