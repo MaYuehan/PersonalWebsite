@@ -52,6 +52,23 @@
                     parts.push('<p class="text-slate-600 leading-relaxed mb-4">' + sectionValue.lead + '</p>');
                 }
 
+                if (Array.isArray(sectionValue.subsections) && sectionValue.subsections.length > 0) {
+                    parts.push('<div class="space-y-5">');
+                    parts.push(sectionValue.subsections.map(function (item) {
+                        var subsectionClassName = item && item.variant === 'highlight'
+                            ? 'rounded-xl border border-primary/20 bg-primary/5 p-5'
+                            : '';
+
+                        return [
+                            '<div' + (subsectionClassName ? ' class="' + subsectionClassName + '"' : '') + '>',
+                            '<h3 class="text-sm font-semibold text-slate-900 mb-2">' + (item.title || 'Section') + '</h3>',
+                            '<p class="' + (item && item.variant === 'highlight' ? 'text-slate-700 italic leading-relaxed' : 'text-slate-600 leading-relaxed') + '">' + (item.content || '') + '</p>',
+                            '</div>'
+                        ].join('');
+                    }).join(''));
+                    parts.push('</div>');
+                }
+
                 if (Array.isArray(sectionValue.cards) && sectionValue.cards.length > 0) {
                     parts.push('<h3 class="text-sm font-semibold text-slate-900 mb-3">' + (sectionValue.cardsTitle || 'Key Findings') + '</h3>');
                     parts.push('<div class="grid gap-3 sm:grid-cols-2">');
@@ -112,6 +129,9 @@
                     parts.push(sectionValue.placeholderBlocks.map(function (item) {
                         return [
                             '<div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">',
+                            item.image
+                                ? '<figure class="mb-4 overflow-hidden rounded-lg border border-slate-200 bg-white"><img src="' + item.image + '" alt="' + (item.alt || item.title || 'Placeholder image') + '" class="w-full h-auto object-contain"/></figure>'
+                                : '',
                             '<p class="text-sm font-semibold text-slate-700 mb-1">' + (item.title || 'Placeholder') + '</p>',
                             '<p class="text-xs text-slate-500">' + (item.description || '') + '</p>',
                             '</div>'

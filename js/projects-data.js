@@ -114,9 +114,9 @@ window.PORTFOLIO_PROJECTS = [
         ],
         tldr: 'FlowZone is a VR yoga and meditation prototype that provides real-time pose feedback using only a headset and controllers - no external cameras. Built on insights from a qualitative user study with beginners, experts, and instructors, the system was evaluated with 18 users and published at ACM VRST 2025.',
         sectionOrder: [
-            { id: 'problem', title: 'Problem Statement & Research Question' },
+            { id: 'problem', title: 'Problem Statement' },
             { id: 'research', title: 'Preliminary User Study' },
-            { id: 'design', title: 'Design Principles & UX Decisions' },
+            { id: 'design', title: 'Design Overview' },
             { id: 'iteration', title: 'Design Iteration' },
             { id: 'evaluation', title: 'Evaluation & Results' },
             { id: 'technical', title: 'Technical Implementation' },
@@ -125,10 +125,16 @@ window.PORTFOLIO_PROJECTS = [
         ],
         sections: {
             problem: {
-                bullets: [
-                    'Existing <strong>VR yoga apps</strong> often lack real-time feedback, which makes it difficult for users to know whether their posture is correct.',
-                    'Systems that do provide feedback often require <strong>external cameras</strong>, creating a higher setup barrier.',
-                    '<strong>Research question:</strong> "How to design an introductory yoga session in VR to motivate people to do real-life yoga?"'
+                subsections: [
+                    {
+                        title: 'Problem Statement',
+                        content: 'Existing <strong>VR yoga apps</strong> often lack real-time feedback, which makes it difficult for users to know whether their posture is correct. Systems that do provide feedback often require <strong>external cameras</strong>, creating a higher setup barrier.'
+                    },
+                    {
+                        title: 'Research Question',
+                        content: '"How to design an introductory yoga session in VR to motivate people to do real-life yoga?"',
+                        variant: 'highlight'
+                    }
                 ]
             },
             research: {
@@ -144,23 +150,32 @@ window.PORTFOLIO_PROJECTS = [
                     '<strong>Design Goal 2:</strong> Calming immersive environments to reduce distraction.',
                     '<strong>Design Goal 3:</strong> Easy setup using only a headset and controllers, with no external cameras.'
                 ],
+                
                 placeholderBlocks: [
                     {
-                        title: 'Sketch Placeholder',
-                        description: 'Initial user flow sketch image will be added here later.'
+                      title: 'User Flow Sketch',
+                      image: '../../images/flowzone/userflow.png'
                     }
-                ]
+                  ]
             },
             design: {
+     
                 featureBlocks: [
-                    '<strong>Fitts\' Law:</strong> large buttons placed near the cursor for quicker interaction.',
-                    '<strong>Hicks\' Law:</strong> limit visible choices and group options into clear categories.',
-                    '<strong>Progressive environmental unlocking:</strong> used as an incentive to encourage continued use.'
+                    '<strong>Main Menu Scene (Figure 1.1):</strong> Allows users to navigate to different parts of the experience.',
+                    '<strong>Settings Scene (Figure 1.2):</strong> Enables users to calibrate measurements required for tracking during lessons.',
+                    '<strong>Environment Selection Scene (Figure 1.3):</strong> Lets users choose virtual environments, with some unlocked as progression incentives.',
+                    '<strong>Pose / Lesson Selection Scene (Figure 1.4):</strong> Allows users to choose between targeted pose practice or full lesson simulation.',
+                    '<strong>Pose Scene (Figure 1.5):</strong> Enables users to select and practice a specific yoga pose for focused training.',
+                    '<strong>Lesson Selection Scene (Figure 1.6):</strong> Allows users to choose structured yoga lessons including multiple poses and meditation.',
+                    '<strong>Lesson Scene (Figure 1.7):</strong> The main guided VR yoga lesson experience.',
+                    '<strong>Meditation Scene (Figure 1.8):</strong> A cooldown and relaxation space after the yoga session.'
                 ],
+
                 placeholderBlocks: [
                     {
-                        title: 'Screenshots Placeholder',
-                        description: 'Screenshots from the paper will be added here later.'
+                        title: 'System UI Flow Overview',
+                        image: '../../images/flowzone/ui-flowzone.png',
+                        alt: 'FlowZone system UI flow overview'
                     }
                 ]
             },
