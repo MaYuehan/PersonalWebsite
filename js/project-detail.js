@@ -81,6 +81,53 @@
                     parts.push('</div>');
                 }
 
+                if (Array.isArray(sectionValue.metricCards) && sectionValue.metricCards.length > 0) {
+                    parts.push('<div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">');
+                    parts.push(sectionValue.metricCards.map(function (item) {
+                        return [
+                            '<article class="rounded-xl border border-slate-200 bg-slate-50 p-4">',
+                            '<p class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">' + (item.label || 'Metric') + '</p>',
+                            '<p class="text-2xl font-bold font-heading text-slate-900 mb-1">' + (item.value || '') + '</p>',
+                            (item.description ? '<p class="text-sm text-slate-600 leading-relaxed">' + item.description + '</p>' : ''),
+                            '</article>'
+                        ].join('');
+                    }).join(''));
+                    parts.push('</div>');
+                }
+
+                if (Array.isArray(sectionValue.quoteBlocks) && sectionValue.quoteBlocks.length > 0) {
+                    parts.push('<div class="space-y-3">');
+                    parts.push(sectionValue.quoteBlocks.map(function (item) {
+                        return [
+                            '<blockquote class="rounded-xl border border-slate-200 bg-white p-4 sm:p-5">',
+                            '<p class="text-slate-700 italic leading-relaxed">"' + item + '"</p>',
+                            '</blockquote>'
+                        ].join('');
+                    }).join(''));
+                    parts.push('</div>');
+                }
+
+                if (Array.isArray(sectionValue.placeholderBlocks) && sectionValue.placeholderBlocks.length > 0) {
+                    parts.push('<div class="space-y-4">');
+                    parts.push(sectionValue.placeholderBlocks.map(function (item) {
+                        return [
+                            '<div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">',
+                            '<p class="text-sm font-semibold text-slate-700 mb-1">' + (item.title || 'Placeholder') + '</p>',
+                            '<p class="text-xs text-slate-500">' + (item.description || '') + '</p>',
+                            '</div>'
+                        ].join('');
+                    }).join(''));
+                    parts.push('</div>');
+                }
+
+                if (Array.isArray(sectionValue.linkButtons) && sectionValue.linkButtons.length > 0) {
+                    parts.push('<div class="flex flex-wrap gap-3">');
+                    parts.push(sectionValue.linkButtons.map(function (item) {
+                        return '<a href="' + (item.url || '#') + '" target="' + ((item.url || '#') === '#' ? '_self' : '_blank') + '" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-secondary transition shadow-sm hover:shadow-md">' + (item.label || 'Open link') + '<span class="ml-2" aria-hidden="true">&rarr;</span></a>';
+                    }).join(''));
+                    parts.push('</div>');
+                }
+
                 if (sectionValue.changeShowcase && Array.isArray(sectionValue.changeShowcase.changes)) {
                     var intro = sectionValue.changeShowcase.intro || '';
                     if (intro) {
@@ -175,6 +222,11 @@
                 '<div class="grid sm:grid-cols-3 gap-4 text-sm mb-4">',
                 metaCards.join(''),
                 '</div>',
+                project.heroLinks && project.heroLinks.length
+                    ? '<div class="flex flex-wrap gap-3 mb-4">' + project.heroLinks.map(function (item) {
+                        return '<a href="' + (item.url || '#') + '" target="' + ((item.url || '#') === '#' ? '_self' : '_blank') + '" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-secondary transition shadow-sm hover:shadow-md">' + (item.label || 'Open link') + '<span class="ml-2" aria-hidden="true">&rarr;</span></a>';
+                    }).join('') + '</div>'
+                    : '',
                 project.website
                     ? '<div class="rounded-2xl border border-primary/20 bg-primary/5 p-5"><p class="text-sm font-semibold text-slate-900 mb-2">More project details and process</p><a href="' + project.website.url + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-secondary transition shadow-sm hover:shadow-md">' + (project.website.label || 'View site') + '<span class="ml-2" aria-hidden="true">&rarr;</span></a><p class="text-sm text-slate-600 mt-3">' + (project.website.description || '') + '</p></div>'
                     : ''
@@ -185,7 +237,7 @@
             tldr.innerHTML = '<p class="text-slate-700 leading-relaxed">' + (project.tldr || 'This case study will be expanded with final outcomes, design rationale, and measurable impact.') + '</p>';
         }
 
-        var sectionOrder = [
+        var sectionOrder = project.sectionOrder || [
             { id: 'problem', title: 'Problem' },
             { id: 'research', title: 'Research' },
             { id: 'define', title: 'Define' },

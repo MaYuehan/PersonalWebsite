@@ -102,10 +102,127 @@ window.PORTFOLIO_PROJECTS = [
         title: 'FlowZone',
         description: 'A VR yoga and meditation experience that combines real-time motion feedback with immersive wellness environments.',
         tag: 'UX / AI',
-        summary: 'A research-backed VR experience to improve pose accuracy and reduce stress.',
-        role: 'Unity Developer',
-        timeline: 'Feb 2025 - May 2025',
-        status: 'Research Prototype'
+        summary: 'Real-time pose-tracking VR yoga and mindfulness meditation for stress reduction.',
+        role: 'Product Designer / User Researcher / Unity Developer',
+        timeline: '4 months',
+        status: 'Published at ACM VRST 2025',
+        heroLinks: [
+            {
+                label: 'View ACM VRST 2025 Publication',
+                url: 'https://dl.acm.org/doi/10.1145/3756884.3770544'
+            }
+        ],
+        tldr: 'FlowZone is a VR yoga and meditation prototype that provides real-time pose feedback using only a headset and controllers - no external cameras. Built on insights from a qualitative user study with beginners, experts, and instructors, the system was evaluated with 18 users and published at ACM VRST 2025.',
+        sectionOrder: [
+            { id: 'problem', title: 'Problem Statement & Research Question' },
+            { id: 'research', title: 'Preliminary User Study' },
+            { id: 'design', title: 'Design Principles & UX Decisions' },
+            { id: 'iteration', title: 'Design Iteration' },
+            { id: 'evaluation', title: 'Evaluation & Results' },
+            { id: 'technical', title: 'Technical Implementation' },
+            { id: 'reflection', title: 'Reflection & Limitations' },
+            { id: 'links', title: 'Links' }
+        ],
+        sections: {
+            problem: {
+                bullets: [
+                    'Existing <strong>VR yoga apps</strong> often lack real-time feedback, which makes it difficult for users to know whether their posture is correct.',
+                    'Systems that do provide feedback often require <strong>external cameras</strong>, creating a higher setup barrier.',
+                    '<strong>Research question:</strong> "How to design an introductory yoga session in VR to motivate people to do real-life yoga?"'
+                ]
+            },
+            research: {
+                lead: '<strong>Method:</strong> qualitative interviews with <strong>6 participants</strong> (4 beginners, 1 expert, 1 instructor). Interview topics covered background and experience, motivations, challenges, and environmental preferences.',
+                cardsTitle: '<strong>Key Findings</strong>',
+                cards: [
+                    'Users were unsure if their pose was correct, which highlighted the need for <strong>real-time feedback</strong>.',
+                    'It was hard for users to stay consistent, suggesting the need for <strong>progress tracking</strong> and encouragement.',
+                    'Environment mattered a lot for focus and relaxation, pointing to the value of <strong>immersive calming scenes</strong>.'
+                ],
+                featureBlocks: [
+                    '<strong>Design Goal 1:</strong> Real-time pose feedback to build confidence.',
+                    '<strong>Design Goal 2:</strong> Calming immersive environments to reduce distraction.',
+                    '<strong>Design Goal 3:</strong> Easy setup using only a headset and controllers, with no external cameras.'
+                ],
+                placeholderBlocks: [
+                    {
+                        title: 'Sketch Placeholder',
+                        description: 'Initial user flow sketch image will be added here later.'
+                    }
+                ]
+            },
+            design: {
+                featureBlocks: [
+                    '<strong>Fitts\' Law:</strong> large buttons placed near the cursor for quicker interaction.',
+                    '<strong>Hicks\' Law:</strong> limit visible choices and group options into clear categories.',
+                    '<strong>Progressive environmental unlocking:</strong> used as an incentive to encourage continued use.'
+                ],
+                placeholderBlocks: [
+                    {
+                        title: 'Screenshots Placeholder',
+                        description: 'Screenshots from the paper will be added here later.'
+                    }
+                ]
+            },
+            iteration: {
+                changeShowcase: {
+                    intro: 'From user testing, an example feedback point was: <strong>"The scanner is great, but I don\'t always want to share my meal"</strong>. The corresponding design change was to make sharing optional per log.',
+                    changes: [
+                        {
+                            text: 'Made <strong>sharing optional per log</strong> in response to feedback about control and privacy.'
+                        }
+                    ]
+                },
+                placeholderBlocks: [
+                    {
+                        title: 'Iteration Placeholder',
+                        description: 'More iteration examples will be added here later.'
+                    }
+                ]
+            },
+            evaluation: {
+                metricCards: [
+                    { label: 'User Study', value: 'N = 18' },
+                    { label: 'Stress Reduction', value: '3.92 / 5', description: 'Beginners' },
+                    { label: 'Continue Practicing', value: '4.00 / 5', description: 'Beginners' },
+                    { label: 'Discomfort Level', value: '1.75 / 5', description: 'Lower is better' }
+                ],
+                quoteBlocks: [
+                    'The pose visualization and check was good',
+                    'Very little distractions and the music was calming',
+                    'Having a meditation at the end helped ground me'
+                ],
+                linkButtons: [
+                    {
+                        label: 'Demo Video Placeholder',
+                        url: '#'
+                    }
+                ]
+            },
+            technical: {
+                bullets: [
+                    '<strong>Hardware:</strong> Meta Quest 3',
+                    '<strong>Development:</strong> Unity 3D',
+                    '<strong>Pose tracking:</strong> spatial data from headset and controllers, with no external cameras'
+                ]
+            },
+            reflection: {
+                lead: '<strong>What went well:</strong> real-time feedback improved user confidence and accuracy, while environment design and voice guidance helped promote relaxation.',
+                bullets: [
+                    '<strong>Main challenge:</strong> calibration was sensitive, so users shifting off-center required re-calibration.',
+                    '<strong>Main challenge:</strong> the initial one-time setup was still complex and time-consuming.',
+                    '<strong>What I would do differently:</strong> automate or simplify body calibration.',
+                    '<strong>What I would do differently:</strong> run longer-term home deployment tests.'
+                ]
+            },
+            links: {
+                linkButtons: [
+                    { label: 'ACM VRST 2025 Publication', url: 'https://dl.acm.org/doi/10.1145/3756884.3770544' },
+                    { label: 'Demo Video Placeholder', url: '#' },
+                    { label: 'GitHub project repo', url: 'https://github.com/Song-Mengfei/cs4240Project' }
+                ]
+            }
+        }
     },
     {
         slug: 'nus-flea-market',
