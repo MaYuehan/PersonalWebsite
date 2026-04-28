@@ -87,6 +87,12 @@
                         parts.push('<p class="text-slate-600 leading-relaxed mb-4">' + intro + '</p>');
                     }
 
+                    if (sectionValue.changeShowcase.reportLink) {
+                        parts.push(
+                            '<div class="mb-4"><a href="' + sectionValue.changeShowcase.reportLink.url + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-secondary transition shadow-sm hover:shadow-md">' + (sectionValue.changeShowcase.reportLink.label || 'View Evaluation Report') + '<span class="ml-2" aria-hidden="true">&rarr;</span></a></div>'
+                        );
+                    }
+
                     parts.push('<div class="space-y-4">');
                     parts.push(sectionValue.changeShowcase.changes.map(function (item, index) {
                         var changeText = item;

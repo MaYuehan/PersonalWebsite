@@ -4,6 +4,8 @@ window.PORTFOLIO_PROJECTS = [
         title: 'YUMMIA',
         description: 'A social product concept focused on helping users build sustainable diet habits through community support and tailored recommendations.',
         tag: 'Product / UX',
+        cardBackgroundImage: 'images/yummia/bg-yummia.png',
+        pageBackgroundImage: '../../images/yummia/bg-yummia.png',
         summary: 'A diet-focused social app concept for university students to track calories, discover safe meals, and stay motivated through community support.',
         role: 'Product Lead (Research + Design + PM)',
         timeline: '4 months',
@@ -64,6 +66,10 @@ window.PORTFOLIO_PROJECTS = [
             iteration: {
                 changeShowcase: {
                     intro: 'Ran <strong>Maze usability testing</strong> with task-based scenarios tied to core features.',
+                    reportLink: {
+                        url: 'https://app.maze.co/report/YUMMIA-MAZE-EVALUTION/17grvkt7m35guqnv/47321e9c',
+                        label: 'View Maze Evaluation Report'
+                    },
                     changes: [
                         {
                             text: 'Made sharing <strong>optional</strong> to reduce friction and privacy concerns.',
