@@ -7,22 +7,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../css/tailwind.css">
     <script>
-        tailwind.config = {
+       tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Poppins', 'sans-serif'] },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        heading: ['Poppins', 'sans-serif'] 
+                    },
                     colors: {
-                        primary: '#6b0ba9',
-                        secondary: '#d1bbfe',
-                        accent: '#f7dadb',
-                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a' }
+                        primary: '#213A5C',        // deep navy blue
+                        secondary: '#A3B5C0',      // soft teal (nice contrast, still calm)
+                        accent: '#E6EEF5',         // light blue-grey for backgrounds
+                        highlight: '#F4B942',      // warm accent for small highlights/CTA
+                        slate: { 
+                            50: '#f8fafc', 
+                            100: '#f1f5f9', 
+                            200: '#e2e8f0', 
+                            300: '#cbd5e1', 
+                            400: '#94a3b8', 
+                            500: '#64748b', 
+                            600: '#475569', 
+                            700: '#334155', 
+                            800: '#1e293b', 
+                            900: '#0f172a' 
+                        }
                     }
                 }
             }
         };
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans antialiased relative">
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute inset-0 bg-cover bg-center opacity-[0.50]" style="background-image: url('../../images/flowzone/yoga-pg.png');"></div>
+        <div class="absolute inset-0 bg-slate-50/88 backdrop-blur-[2px]"></div>
+    </div>
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-effect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -48,14 +67,14 @@
             <div class="px-4 pt-4 pb-6 space-y-2">
                 <a href="../../index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Home</a>
                 <a href="../../about.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
-                <a href="../../projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-indigo-50">Projects</a>
+                <a href="../../projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-primary/10">Projects</a>
                 <a href="../../contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Contact</a>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
-        <a href="../../projects.html" class="inline-flex items-center text-primary font-semibold hover:text-purple-700 transition-colors mb-8">
+        <a href="../../projects.html" class="inline-flex items-center text-primary font-semibold hover:opacity-80 transition-colors mb-8">
             <span aria-hidden="true" class="mr-2">&larr;</span>
             Back to Projects
         </a>

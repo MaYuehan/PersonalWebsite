@@ -6,6 +6,7 @@ window.PORTFOLIO_PROJECTS = [
         tag: 'Product / UX',
         cardBackgroundImage: 'images/yummia/bg-yummia.png',
         pageBackgroundImage: '../../images/yummia/bg-yummia.png',
+        heroImage: '../../images/yummia/yummia.png',
         summary: 'A diet-focused social app concept for university students to track calories, discover safe meals, and stay motivated through community support.',
         role: 'Product Lead (Research + Design + PM)',
         timeline: '4 months',
@@ -102,6 +103,9 @@ window.PORTFOLIO_PROJECTS = [
         title: 'FlowZone',
         description: 'A VR yoga and meditation experience that combines real-time motion feedback with immersive wellness environments.',
         tag: 'UX / AI',
+        cardBackgroundImage: 'images/flowzone/yoga-pg.png',
+        pageBackgroundImage: '../../images/flowzone/yoga-pg.png',
+        heroImage: '../../images/flowzone/flowzone.png',
         summary: 'Real-time pose-tracking VR yoga and mindfulness meditation for stress reduction.',
         role: 'Product Designer / User Researcher / Unity Developer',
         timeline: '4 months',
@@ -273,12 +277,6 @@ window.PORTFOLIO_PROJECTS = [
                         'The pose visualization and check was good',
                         'Very little distractions and the music was calming',
                         'Having a meditation at the end helped ground me'
-                    ],
-                    links: [
-                        {
-                            label: 'Demo Video Placeholder',
-                            url: '#'
-                        }
                     ]
                 }
             },
@@ -321,7 +319,7 @@ window.PORTFOLIO_PROJECTS = [
             links: {
                 linkButtons: [
                     { label: 'ACM VRST 2025 Publication', url: 'https://dl.acm.org/doi/10.1145/3756884.3770544' },
-                    { label: 'Demo Video Placeholder', url: '#' },
+                    { label: 'Demo Video', url: 'https://drive.google.com/file/d/1WdS8vCSngx3RvDLcstlI4OYshid9YLxt/view?usp=sharing' },
                     { label: 'GitHub project repo', url: 'https://github.com/Song-Mengfei/cs4240Project' }
                 ]
             }

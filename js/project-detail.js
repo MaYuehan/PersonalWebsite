@@ -402,6 +402,74 @@
             });
         }
 
+        function initHeroImageLightbox(rootEl) {
+            if (!rootEl) {
+                return;
+            }
+
+            var triggers = rootEl.querySelectorAll('[data-hero-lightbox-trigger]');
+            if (!triggers.length) {
+                return;
+            }
+
+            var modal = document.getElementById('project-hero-lightbox');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'project-hero-lightbox';
+                modal.className = 'hidden fixed inset-0 z-[90] items-center justify-center bg-slate-900/80 p-4 sm:p-6';
+                modal.innerHTML = [
+                    '<div class="relative max-w-6xl w-full">',
+                    '<button type="button" data-hero-lightbox-close class="absolute -top-3 -right-3 sm:top-2 sm:right-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-800 shadow-md hover:bg-slate-100 transition" aria-label="Close image">&times;</button>',
+                    '<img data-hero-lightbox-image src="" alt="" class="w-full max-h-[85vh] object-contain rounded-xl bg-white"/>',
+                    '</div>'
+                ].join('');
+                document.body.appendChild(modal);
+            }
+
+            var modalImage = modal.querySelector('[data-hero-lightbox-image]');
+            var closeButton = modal.querySelector('[data-hero-lightbox-close]');
+
+            function closeModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                if (modalImage) {
+                    modalImage.setAttribute('src', '');
+                    modalImage.setAttribute('alt', '');
+                }
+            }
+
+            triggers.forEach(function (trigger) {
+                trigger.addEventListener('click', function () {
+                    if (!modalImage) {
+                        return;
+                    }
+                    modalImage.setAttribute('src', trigger.getAttribute('data-hero-image-src') || '');
+                    modalImage.setAttribute('alt', trigger.getAttribute('data-hero-image-alt') || '');
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            });
+
+            if (closeButton && !closeButton.dataset.bound) {
+                closeButton.dataset.bound = 'true';
+                closeButton.addEventListener('click', closeModal);
+            }
+
+            if (!modal.dataset.overlayBound) {
+                modal.dataset.overlayBound = 'true';
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                        closeModal();
+                    }
+                });
+            }
+        }
+
         function renderSectionBody(sectionValue) {
             if (Array.isArray(sectionValue)) {
                 return [
@@ -831,6 +899,7 @@
         }
 
         if (hero) {
+            var hasHeroImage = !!project.heroImage;
             var metaCards = [
                 '<div class="bg-slate-50 border border-slate-100 rounded-xl p-4"><p class="text-slate-500 mb-1">Role</p><p class="font-semibold text-slate-900">' + (project.role || 'TBD') + '</p></div>',
                 '<div class="bg-slate-50 border border-slate-100 rounded-xl p-4"><p class="text-slate-500 mb-1">Timeline</p><p class="font-semibold text-slate-900">' + (project.timeline || 'TBD') + '</p></div>',
@@ -838,6 +907,8 @@
             ];
 
             hero.innerHTML = [
+                '<div class="' + (hasHeroImage ? 'grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-6 lg:gap-8 items-start' : '') + '">',
+                '<div>',
                 '<p class="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Case Study</p>',
                 '<h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 mb-4">' + project.title + '</h1>',
                 '<p class="text-lg text-slate-600 mb-8 max-w-3xl">' + (project.summary || project.description || '') + '</p>',
@@ -851,8 +922,14 @@
                     : '',
                 project.website
                     ? '<div class="rounded-2xl border border-primary/20 bg-primary/5 p-5"><p class="text-sm font-semibold text-slate-900 mb-2">More project details and process</p><a href="' + project.website.url + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-secondary transition shadow-sm hover:shadow-md">' + (project.website.label || 'View site') + '<span class="ml-2" aria-hidden="true">&rarr;</span></a><p class="text-sm text-slate-600 mt-3">' + (project.website.description || '') + '</p></div>'
-                    : ''
+                    : '',
+                '</div>',
+                hasHeroImage
+                    ? '<button type="button" data-hero-lightbox-trigger data-hero-image-src="' + project.heroImage + '" data-hero-image-alt="' + (project.title || 'Project') + ' hero image" class="group relative text-left cursor-zoom-in rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 lg:max-w-[460px] lg:justify-self-end"><img src="' + project.heroImage + '" alt="' + (project.title || 'Project') + ' hero image" class="w-full h-auto object-cover"/><span class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors"></span><span class="absolute right-3 top-3 inline-flex items-center justify-center rounded-full bg-white/90 text-slate-700 text-xs font-semibold px-2.5 py-1 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">Zoom</span></button>'
+                    : '',
+                '</div>'
             ].join('');
+            initHeroImageLightbox(hero);
         }
 
         if (tldr) {
