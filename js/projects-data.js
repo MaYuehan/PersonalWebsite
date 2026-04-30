@@ -121,6 +121,7 @@ window.PORTFOLIO_PROJECTS = [
             { id: 'evaluation', title: 'Evaluation & Results' },
             { id: 'technical', title: 'Technical Implementation' },
             { id: 'reflection', title: 'Reflection & Limitations' },
+            { id: 'futureImprovements', title: 'Future Improvements' },
             { id: 'links', title: 'Links' }
         ],
         sections: {
@@ -138,81 +139,148 @@ window.PORTFOLIO_PROJECTS = [
                 ]
             },
             research: {
-                lead: '<strong>Method:</strong> qualitative interviews with <strong>6 participants</strong> (4 beginners, 1 expert, 1 instructor). Interview topics covered background and experience, motivations, challenges, and environmental preferences.',
-                cardsTitle: '<strong>Key Findings</strong>',
-                cards: [
-                    'Users were unsure if their pose was correct, which highlighted the need for <strong>real-time feedback</strong>.',
-                    'It was hard for users to stay consistent, suggesting the need for <strong>progress tracking</strong> and encouragement.',
-                    'Environment mattered a lot for focus and relaxation, pointing to the value of <strong>immersive calming scenes</strong>.'
-                ],
-                featureBlocks: [
-                    '<strong>Design Goal 1:</strong> Real-time pose feedback to build confidence.',
-                    '<strong>Design Goal 2:</strong> Calming immersive environments to reduce distraction.',
-                    '<strong>Design Goal 3:</strong> Easy setup using only a headset and controllers, with no external cameras.'
-                ],
-                
-                placeholderBlocks: [
-                    {
-                      title: 'User Flow Sketch',
-                      image: '../../images/flowzone/userflow.png'
-                    }
-                  ]
+                researchShowcase: {
+                    methodTitle: 'Study Method',
+                    method: 'Qualitative interviews with <strong>6 participants</strong> (4 beginners, 1 expert, 1 instructor). Interview topics covered background and experience, motivations, challenges, and environmental preferences.',
+                    findings: [
+                        'Users were unsure if their pose was correct, which highlighted the need for <strong>real-time feedback</strong>.',
+                        'It was hard for users to stay consistent, suggesting the need for <strong>progress tracking</strong> and encouragement.',
+                        'Environment mattered a lot for focus and relaxation, pointing to the value of <strong>immersive calming scenes</strong>.'
+                    ],
+                    designGoals: [
+                        '<strong>Design Goal 1:</strong> Real-time pose feedback to build confidence.',
+                        '<strong>Design Goal 2:</strong> Calming immersive environments to reduce distraction.',
+                        '<strong>Design Goal 3:</strong> Easy setup using only a headset and controllers, with no external cameras.'
+                    ],
+                    image: '../../images/flowzone/userflow.png',
+                    imageAlt: 'FlowZone preliminary user flow sketch',
+                    imageCaption: 'User Flow Sketch'
+                }
             },
             design: {
-     
-                featureBlocks: [
-                    '<strong>Main Menu Scene (Figure 1.1):</strong> Allows users to navigate to different parts of the experience.',
-                    '<strong>Settings Scene (Figure 1.2):</strong> Enables users to calibrate measurements required for tracking during lessons.',
-                    '<strong>Environment Selection Scene (Figure 1.3):</strong> Lets users choose virtual environments, with some unlocked as progression incentives.',
-                    '<strong>Pose / Lesson Selection Scene (Figure 1.4):</strong> Allows users to choose between targeted pose practice or full lesson simulation.',
-                    '<strong>Pose Scene (Figure 1.5):</strong> Enables users to select and practice a specific yoga pose for focused training.',
-                    '<strong>Lesson Selection Scene (Figure 1.6):</strong> Allows users to choose structured yoga lessons including multiple poses and meditation.',
-                    '<strong>Lesson Scene (Figure 1.7):</strong> The main guided VR yoga lesson experience.',
-                    '<strong>Meditation Scene (Figure 1.8):</strong> A cooldown and relaxation space after the yoga session.'
-                ],
-
-                placeholderBlocks: [
+                sceneShowcase: [
                     {
-                        title: 'System UI Flow Overview',
-                        image: '../../images/flowzone/ui-flowzone.png',
-                        alt: 'FlowZone system UI flow overview'
+                        title: 'Main Menu Scene (Figure 1.1)',
+                        description: 'Allows users to navigate to different parts of the experience, including:',
+                        bullets: [
+                            'Start Lesson (start button)',
+                            'Set Environment (environment button)',
+                            'Calibration (settings button)'
+                        ],
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.1.png',
+                                caption: 'Figure 1.1: Main Menu Scene',
+                                alt: 'FlowZone main menu scene'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Settings Scene (Figure 1.2)',
+                        description: 'Enables users to calibrate the measurements required for tracking during lessons.',
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.2.png',
+                                caption: 'Figure 1.2: Settings Scene',
+                                alt: 'FlowZone settings scene'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Environment Selection Scene (Figure 1.3.1 and 1.3.2)',
+                        description: 'Lets users choose between different virtual environments, with some environments unlocked through progression.',
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.3.1.png',
+                                caption: 'Figure 1.3.1: Environment Selection Scene',
+                                alt: 'FlowZone environment selection scene option one'
+                            },
+                            {
+                                src: '../../images/flowzone/figures/figure1.3.2.png',
+                                caption: 'Figure 1.3.2: Environment Selection Scene',
+                                alt: 'FlowZone environment selection scene option two'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Lesson Selection Scene (Figure 1.4)',
+                        description: 'Allows users to select structured yoga lessons that include multiple poses and meditation.',
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.4.png',
+                                caption: 'Figure 1.4: Lesson Selection Scene',
+                                alt: 'FlowZone lesson selection scene'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Lesson Scene (Figure 1.5)',
+                        description: 'The main guided VR yoga experience.',
+                        bullets: [
+                            'Figure 1.5.1: Instruction screen before the lesson starts',
+                            'Figure 1.5.2: Lesson UI during the session'
+                        ],
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.5.1.png',
+                                caption: 'Figure 1.5.1: Instruction screen before the lesson starts',
+                                alt: 'FlowZone lesson instruction screen'
+                            },
+                            {
+                                src: '../../images/flowzone/figures/figure1.5.2.png',
+                                caption: 'Figure 1.5.2: Lesson UI during the session',
+                                alt: 'FlowZone lesson UI during session'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Meditation Scene (Figure 1.6)',
+                        description: 'A cooldown and relaxation space after completing the yoga session.',
+                        figures: [
+                            {
+                                src: '../../images/flowzone/figures/figure1.6.png',
+                                caption: 'Figure 1.6: Meditation Scene',
+                                alt: 'FlowZone meditation scene'
+                            }
+                        ]
                     }
                 ]
             },
             iteration: {
-                changeShowcase: {
-                    intro: 'From user testing, an example feedback point was: <strong>"The scanner is great, but I don\'t always want to share my meal"</strong>. The corresponding design change was to make sharing optional per log.',
-                    changes: [
-                        {
-                            text: 'Made <strong>sharing optional per log</strong> in response to feedback about control and privacy.'
-                        }
-                    ]
-                },
-                placeholderBlocks: [
+                iterationFeedback: [
                     {
-                        title: 'Iteration Placeholder',
-                        description: 'More iteration examples will be added here later.'
+                        feedback: 'Users were not sure what they did wrong when the system marked their pose as incorrect.',
+                        before: 'When the system marked a pose as incorrect, users had no clear indication of what body part or movement needed adjustment.',
+                        after: 'Added real-time feedback and hints to guide users on how to correct their pose.'
+                    },
+                    {
+                        feedback: 'Each lesson originally contained only one pose, and users found the lessons too short.',
+                        before: 'Lessons ended quickly after a single pose, which reduced engagement and made practice feel fragmented.',
+                        after: 'Each lesson now includes multiple poses before transitioning into meditation.'
                     }
                 ]
             },
             evaluation: {
-                metricCards: [
-                    { label: 'User Study', value: 'N = 18' },
-                    { label: 'Stress Reduction', value: '3.92 / 5', description: 'Beginners' },
-                    { label: 'Continue Practicing', value: '4.00 / 5', description: 'Beginners' },
-                    { label: 'Discomfort Level', value: '1.75 / 5', description: 'Lower is better' }
-                ],
-                quoteBlocks: [
-                    'The pose visualization and check was good',
-                    'Very little distractions and the music was calming',
-                    'Having a meditation at the end helped ground me'
-                ],
-                linkButtons: [
-                    {
-                        label: 'Demo Video Placeholder',
-                        url: '#'
-                    }
-                ]
+                evaluationShowcase: {
+                    lead: 'FlowZone was evaluated with beginner users to measure stress impact, motivation, and overall comfort after completing guided sessions.',
+                    metrics: [
+                        { label: 'User Study', value: 'N = 18' },
+                        { label: 'Stress Reduction', value: '3.92 / 5', description: 'Beginners' },
+                        { label: 'Continue Practicing', value: '4.00 / 5', description: 'Beginners' },
+                        { label: 'Discomfort Level', value: '1.75 / 5', description: 'Lower is better' }
+                    ],
+                    quotes: [
+                        'The pose visualization and check was good',
+                        'Very little distractions and the music was calming',
+                        'Having a meditation at the end helped ground me'
+                    ],
+                    links: [
+                        {
+                            label: 'Demo Video Placeholder',
+                            url: '#'
+                        }
+                    ]
+                }
             },
             technical: {
                 bullets: [
@@ -222,12 +290,32 @@ window.PORTFOLIO_PROJECTS = [
                 ]
             },
             reflection: {
-                lead: '<strong>What went well:</strong> real-time feedback improved user confidence and accuracy, while environment design and voice guidance helped promote relaxation.',
-                bullets: [
-                    '<strong>Main challenge:</strong> calibration was sensitive, so users shifting off-center required re-calibration.',
-                    '<strong>Main challenge:</strong> the initial one-time setup was still complex and time-consuming.',
-                    '<strong>What I would do differently:</strong> automate or simplify body calibration.',
-                    '<strong>What I would do differently:</strong> run longer-term home deployment tests.'
+                reflectionShowcase: {
+                    lead: '<strong>What went well:</strong> real-time feedback improved user confidence and accuracy, while environment design and voice guidance helped promote relaxation.',
+                    items: [
+                        {
+                            title: 'Main challenge: calibration sensitivity',
+                            detail: 'Calibration was sensitive, so users shifting off-center required re-calibration.'
+                        },
+                        {
+                            title: 'Main challenge: one-time setup complexity',
+                            detail: 'The initial one-time setup was still complex and time-consuming.'
+                        },
+                        {
+                            title: 'What I would do differently: simplify calibration',
+                            detail: 'Automate or simplify body calibration so users can start sessions faster with fewer interruptions.'
+                        },
+                        {
+                            title: 'What I would do differently: longer-term testing',
+                            detail: 'Run longer-term home deployment tests to evaluate retention, consistency, and behavior change over time.'
+                        }
+                    ]
+                }
+            },
+            futureImprovements: {
+                featureBlocks: [
+                    'Redesign environments from cartoon-style visuals to more realistic, nature-inspired environments.',
+                    'Add dynamic elements (e.g. ambient lighting, gentle particle effects) to enhance immersion and deepen relaxation.'
                 ]
             },
             links: {
