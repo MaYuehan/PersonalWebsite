@@ -326,6 +326,195 @@ window.PORTFOLIO_PROJECTS = [
         }
     },
     {
+        slug: 'petpat',
+        title: 'PetPat',
+        description: 'A mobile app connecting pet owners with verified caregivers, featuring in-app chat, real-time photo updates, and GPS location sharing.',
+        tag: 'UX Design',
+        cardBackgroundImage: 'images/petpat/bg-petpat.png',
+        pageBackgroundImage: '../../images/petpat/bg-petpat.png',
+        heroImage: '../../images/petpat/petpat-poster.png',
+        summary: 'A pet care mobile app that connects owners with verified caregivers through secure in-app chat, real-time photo sharing, and GPS location updates - designed from survey-driven user research to a hi-fi Figma prototype.',
+        role: 'Solo Designer (UX Research + Design)',
+        timeline: ' 2 months',
+        status: 'Hi-Fi Prototype',
+        heroLinks: [
+            {
+                label: 'View PetPat Prototype',
+                url: 'https://www.figma.com/proto/AXFDZO2qXFcrt9iItISrng/PetPat?node-id=36-326&t=hknpG7mqOdFqrJ9N-1&starting-point-node-id=36%3A326'
+            }
+        ],
+        tldr: 'PetPat is a mobile app designed to help <strong>pet owners</strong> find reliable caregivers during busy periods, and give <strong>caregivers</strong> a platform to find pet-sitting gigs. Grounded in survey research with 7–10 participants, the design prioritised <strong>verified profiles</strong>, <strong>secure in-app chat</strong>, and <strong>real-time photo and location updates</strong> — all validated as critical needs by users. Delivered as a full hi-fi Figma prototype covering 4 user flows.',
+        sectionOrder: [
+            { id: 'problem', title: 'Problem' },
+            { id: 'research', title: 'User Research' },
+            { id: 'features', title: 'Core Features' },
+            { id: 'userflows', title: 'User Flows' },
+            { id: 'sketches', title: 'Sketches' },
+            { id: 'prototype', title: 'Prototype' },
+            { id: 'design', title: 'Design Principles' },
+            { id: 'reflection', title: 'Reflection' }
+        ],
+        sections: {
+            problem: {
+                subsections: [
+                    {
+                        title: 'Background',
+                        content: 'Pet owners often need trusted individuals to care for their pets during busy periods, but have no structured, verified platform to find them. Meanwhile, potential caregivers lack a dedicated space to offer their services and build a reputation.'
+                    },
+                    {
+                        title: 'Design Challenge',
+                        content: 'How do we design a mobile app that gives pet owners enough confidence to trust a stranger with their pet, and gives caregivers a fair, structured way to present themselves and find work?',
+                        variant: 'highlight'
+                    }
+                ]
+            },
+            research: {
+                lead: 'A survey was distributed in pet lover community groups targeting 7-10 participants who were either pet owners or willing to act as caregivers. Questions focused on preferred features, communication needs, and what makes a caregiver profile trustworthy.',
+                researchShowcase: {
+                    methodTitle: 'Survey Method',
+                    method: 'Distributed to <strong>7–10 participants</strong> (mix of pet owners and potential caregivers) via pet lover community groups. Topics covered preferred features, communication needs, and trustworthiness factors.',
+                    findings: [
+                        '<strong>83%</strong> of pet owners need help with feeding; playtime (50%), walking (33%), and grooming (33%) also common.',
+                        '<strong>83%</strong> of pet owners are not comfortable trusting a caregiver based solely on profile info - making in-app chat essential for self-verification.',
+                        '<strong>100%</strong> of pet owners say detailed experience or certification makes a caregiver trustworthy; 67% also value positive reviews and background checks.',
+                        '<strong>100%</strong> of caregivers want to provide real-time updates to owners - photo and location sharing is a top motivator for responsible behaviour.'
+                    ],
+                    designGoals: [
+                        '<strong>Design Goal 1:</strong> Make caregiver profiles verifiable: require experience, allow optional certifications, and run a system verification step before profiles go live.',
+                        '<strong>Design Goal 2:</strong> Build in-app chat as a core feature, not an add-on. It is the primary way pet owners self-verify caregiver reliability.',
+                        '<strong>Design Goal 3:</strong> Enable real-time photo and GPS location sharing through chat, giving owners peace of mind during active care.'
+                    ]
+                }
+            },
+            features: {
+                lead: 'Four core features were determined based on user research findings:',
+                featureBlocks: [
+                    '<strong>Care Needs Posting:</strong> Pet owners post detailed care requests (pet type, tasks, schedule, pay). Caregivers post profiles to browse and apply for gigs. Central to the app\'s core function.',
+                    '<strong>Profile Verification:</strong> Caregivers submit experience and optional certifications. The system verifies key details before a profile goes live — directly addressing the 100% of owners who prioritise experience and certification.',
+                    '<strong>Secure In-App Chat:</strong> Direct messaging between owners and caregivers. Rated essential by 100% of pet owners and 71.4% of caregivers. It is the primary trust-building mechanism beyond profiles alone.',
+                    '<strong>Real-Time Photo & Location Updates:</strong> Caregivers send pet photos and share GPS location through chat. Valued by 100% of caregivers and gives owners confidence during active care sessions.'
+                ]
+            },
+            userflows: {
+                lead: 'Four user flows cover the main tasks for both user types:',
+                placeholderBlocks: [
+                    {
+                        title: 'Flow 1 — Posting a Pet Care Job (Pet Owners)',
+                        description: 'Sign up / Log in → Home Screen → Tap "Add" → Select "Look for Caregivers" → Enter job details (pet type, tasks, schedule, pay, optional description) → Review → POST → Job appears in Pet Care Gigs page.',
+                        image: '../../images/petpat/userFlow1.png',
+                        alt: 'User Flow 1 diagram — Posting a Pet Care Job'
+                    },
+                    {
+                        title: 'Flow 2 — Posting a Caregiver Profile (Caregivers)',
+                        description: 'Sign up / Log in → Home Screen → Tap "Add" → Select "To Be a Caregiver" → Fill personal details, experience, certifications, available time, expected pay → POST → System verification → Profile live on Pet Caregivers page (or error prompt to revise).',
+                        image: '../../images/petpat/userFlow2.png',
+                        alt: 'User Flow 2 diagram — Posting a Caregiver Profile'
+                    },
+                    {
+                        title: 'Flow 3 — Booking a Caregiver via In-App Chat (Pet Owners)',
+                        description: 'Log in → Browse Pet Caregivers page (filter by species) → Select caregiver → Review detailed profile → Tap "Contact" → Chat to discuss needs → Confirm booking.',
+                        image: '../../images/petpat/userFlow3.png',
+                        alt: 'User Flow 3 diagram — Booking a Caregiver via In-App Chat'
+                    },
+                    {
+                        title: 'Flow 4 — Sending Pet Status Updates (Caregivers)',
+                        description: 'Log in → Contact page → Open pet owner chat → Tap camera icon → Take photo → Review (Retake if needed) → Send → Tap location icon → Confirm system location on map → Send location to owner.',
+                        image: '../../images/petpat/userFlow4.png',
+                        alt: 'User Flow 4 diagram — Sending Pet Status Updates'
+                    }
+                ]
+            },
+            sketches: {
+                lead: 'Low-fidelity sketches were drawn for each user flow before moving to wireframes. Key decisions made at this stage: a central "+" Add button on the menu bar for easy access, bookmark-style tab navigation between "Look for Caregivers" and "To Be a Caregiver", and a horizontally scrollable species-filter bar at the top of the caregiver listing page.',
+                sceneShowcase: [
+                    {
+                        title: 'Flow 1 - Care Job Posting',
+                        description: 'Pet owners post a care request by tapping the central "Add" button and selecting "Look for Caregivers". The form collects pet type, required tasks, schedule, pay, and an optional description.',
+                        figures: [
+                            { src: '../../images/petpat/sketch1.png', alt: 'Flow 1 sketch - Care Job Posting', caption: 'Flow 1: Posting a Pet Care Job' }
+                        ]
+                    },
+                    {
+                        title: 'Flow 2 - Caregiver Profile Posting',
+                        description: 'Caregivers fill in personal details, experience, optional certifications, available time, and expected pay. The profile goes through a system verification step before appearing on the Pet Caregivers page.',
+                        figures: [
+                            { src: '../../images/petpat/sketch2.png', alt: 'Flow 2 sketch - Caregiver Profile Posting', caption: 'Flow 2: Posting a Caregiver Profile' }
+                        ]
+                    },
+                    {
+                        title: 'Flow 3 - Booking a Caregiver',
+                        description: 'Pet owners browse the caregiver listing (filterable by species), view a detailed profile, and tap "Contact" to open a secure in-app chat where they can discuss needs and confirm the booking.',
+                        figures: [
+                            { src: '../../images/petpat/sketch3.png', alt: 'Flow 3 sketch - Booking a Caregiver', caption: 'Flow 3: Booking a Caregiver via In-App Chat' }
+                        ]
+                    },
+                    {
+                        title: 'Flow 4 - Pet Status Updates',
+                        description: 'Caregivers send real-time updates through the chat: tap the camera icon to take and send a pet photo (with a retake option), then tap the location icon to confirm and share GPS position with the owner.',
+                        figures: [
+                            { src: '../../images/petpat/sketch4.png', alt: 'Flow 4 sketch - Pet Status Updates', caption: 'Flow 4: Updating Pet Status via Photo & Location' }
+                        ]
+                    }
+                ]
+            },
+            prototype: {
+                lead: 'All four user flows were developed into a full hi-fi Figma prototype. The primary interactive task - caregivers updating pet status by sharing photos and location - was the first prioritised flow in the prototype.',
+                prototypeShowcase: [
+                    {
+                        title: 'Wireframe',
+                        buttonLabel: 'Wireframe in Figma',
+                        link: 'https://www.figma.com/design/AXFDZO2qXFcrt9iItISrng/PetPat?node-id=0-1&t=fQKb67bYnnEOHE9n-1',
+                        image: '../../images/petpat/lowfi.png',
+                        alt: 'PetPat wireframe screenshot',
+                        description: 'Wireframes covering all four user flows: login/signup, Pet Care Jobs listing, caregiver profiles, posting forms, in-app chat, and photo/location sharing.'
+                    },
+                    {
+                        title: 'Hi-Fi Prototype',
+                        buttonLabel: 'Hi-Fi Prototype in Figma',
+                        link: 'https://www.figma.com/design/AXFDZO2qXFcrt9iItISrng/PetPat?node-id=36-325&t=fQKb67bYnnEOHE9n-1',
+                        image: '../../images/petpat/hifi.png',
+                        alt: 'PetPat hi-fi prototype screenshot',
+                        description: 'High-fidelity prototype with full interactivity. Light yellow used for caregiver-facing pages; light blue for owner-facing pages.'
+                    }
+                ]
+            },
+            design: {
+                lead: 'Six Gestalt and design principles were applied throughout:',
+                featureBlocks: [
+                    '<strong>Similarity:</strong> The Pet Care Jobs and Pet Caregivers pages share the same card layout and information structure, making both sections instantly recognisable and reducing the learning curve for users.',
+                    '<strong>Proximity:</strong> Logically related data, pet name, photo, task type, and schedule, are grouped within preview cards, giving users a complete at-a-glance overview without extra navigation.',
+                    '<strong>Continuity:</strong> Horizontally scrollable species-filter avatars and vertically scrollable profile cards let users browse options smoothly and without interruption.',
+                    '<strong>Contrast:</strong> High-contrast solid black "POST" buttons against light blue/yellow backgrounds draw attention to essential actions, reducing errors and guiding users through key tasks.',
+                    '<strong>Common Region:</strong> Light yellow marks caregiver-facing pages; light blue marks owner-facing pages. Blue\'s calming quality also reinforces the trust and reliability pet owners seek.',
+                    '<strong>Recognition over Recall:</strong> Familiar icons (camera, message, location pin) are used consistently in the nav bar so users identify each function at a glance without memorising it.'
+                ]
+            },
+            reflection: {
+                reflectionShowcase: {
+                    lead: '<strong>Key takeaway:</strong> Early user research had a clear impact on feature decisions. Since 83% of owners said they weren’t comfortable relying on profiles alone, in-app chat became a core feature rather than just a nice-to-have. Without that insight, it would have been easy to underestimate its importance and prioritise less critical aspects of the design.',
+                    items: [
+                        {
+                            title: 'Design consistency pays off',
+                            detail: 'Making the Pet Care Jobs and Pet Caregivers pages look and behave identically significantly reduced cognitive load. Users could apply knowledge from one page directly to the other without re-learning.'
+                        },
+                        {
+                            title: 'Verification flow needed careful UX attention',
+                            detail: 'The caregiver verification step introduced a decision branch (pass / fail / re-submit) that required clear error messaging to avoid user frustration. The sketch phase helped surface this complexity early.'
+                        },
+                        {
+                            title: 'Next step: usability testing with real users',
+                            detail: 'The hi-fi prototype covers all key flows but has not yet been tested with real pet owners and caregivers. A usability study would validate the booking flow and identify friction points in the chat-to-booking transition.'
+                        },
+                        {
+                            title: 'Future feature: in-app payments and reviews',
+                            detail: 'Survey participants mentioned payment and caregiver ratings as desired features. An in-app payment flow and a post-care review system would close the trust loop and increase long-term platform reliability.'
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
         slug: 'nus-flea-market',
         title: 'NUS Flea Market',
         description: 'A student marketplace app concept for easy second-hand exchange inside the NUS community.',

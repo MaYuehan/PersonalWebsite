@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPat | Product Manager & Frontend Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/tailwind.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#EF9B0F',
+                        secondary: '#FFBF00',
+                        accent: '#f7dadb',
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans antialiased">
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute inset-0 bg-cover bg-center opacity-[0.50]" style="background-image: url('../../images/petpat/bg-petpat.png');"></div>
+        <div class="absolute inset-0 bg-slate-50/88 backdrop-blur-[2px]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../../index.html" class="text-2xl font-bold font-heading text-slate-900 tracking-tight">
+                        Ma Yuehan<span class="text-primary">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="../../index.html" class="text-slate-500 hover:text-primary transition font-medium">Home</a>
+                    <a href="../../about.html" class="text-slate-500 hover:text-primary transition font-medium">About</a>
+                    <a href="../../projects.html" class="text-primary font-medium border-b-2 border-primary pb-1">Projects</a>
+                    <a href="../../contact.html" class="text-slate-500 hover:text-primary transition font-medium">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-slate-900 focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="../../index.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Home</a>
+                <a href="../../about.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">About</a>
+                <a href="../../projects.html" class="block px-3 py-2 rounded-lg text-base font-medium text-primary bg-indigo-50">Projects</a>
+                <a href="../../contact.html" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-600 hover:text-primary hover:bg-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+        <!-- Back link -->
+        <div class="mb-8 reveal active">
+            <a href="../../projects.html" class="inline-flex items-center text-slate-500 hover:text-primary transition text-sm font-medium">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section — rendered by project-detail.js -->
+        <section id="project-hero" class="mb-8 reveal active"></section>
+
+        <!-- TL;DR Banner -->
+        <div class="mb-10 rounded-2xl bg-white/90 p-6 reveal active">
+            <p class="text-s font-semibold text-primary uppercase tracking-wider mb-2">TL;DR</p>
+            <div id="project-tldr"></div>
+        </div>
+
+        <!-- Two-column layout: main content + sticky side nav -->
+        <div class="flex gap-8 items-start">
+
+            <!-- Main content sections — rendered by project-detail.js -->
+            <div id="project-content" class="flex-1 min-w-0 space-y-6"></div>
+
+            <!-- Sticky side nav — rendered by project-detail.js -->
+            <aside class="hidden lg:block w-44 xl:w-52 flex-shrink-0 sticky top-28">
+                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Sections</p>
+                <nav id="project-sections-nav" class="space-y-0.5 border-l-2 border-slate-100 pl-4"></nav>
+            </aside>
+
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="mt-16 pt-10 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6 reveal">
+            <div>
+                <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold mb-1">Up next</p>
+                <p class="text-xl font-bold text-slate-900 font-heading">More Projects</p>
+            </div>
+            <a href="../../projects.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-purple-800 transition-colors text-sm shadow-sm hover:shadow-md">
+                View All Projects
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../../js/projects-data.js"></script>
+    <script src="../../js/project-detail.js"></script>
+    <script src="../../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.ProjectPages) {
+                window.ProjectPages.renderProjectDetail({ slug: 'petpat' });
+            }
+        });
+    </script>
+</body>
+</html>
