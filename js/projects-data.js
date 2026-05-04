@@ -102,7 +102,7 @@ window.PORTFOLIO_PROJECTS = [
         slug: 'flowzone',
         title: 'FlowZone',
         description: 'A VR yoga and meditation experience that combines real-time motion feedback with immersive wellness environments.',
-        tag: 'UX / AI',
+        tag: 'VR / Product',
         cardBackgroundImage: 'images/flowzone/yoga-pg.png',
         pageBackgroundImage: '../../images/flowzone/yoga-pg.png',
         heroImage: '../../images/flowzone/flowzone.png',
@@ -329,7 +329,7 @@ window.PORTFOLIO_PROJECTS = [
         slug: 'petpat',
         title: 'PetPat',
         description: 'A mobile app connecting pet owners with verified caregivers, featuring in-app chat, real-time photo updates, and GPS location sharing.',
-        tag: 'UX Design',
+        tag: 'UX',
         cardBackgroundImage: 'images/petpat/bg-petpat.png',
         pageBackgroundImage: '../../images/petpat/bg-petpat.png',
         heroImage: '../../images/petpat/petpat-poster.png',
@@ -513,15 +513,15 @@ window.PORTFOLIO_PROJECTS = [
                 }
             }
         }
-    },
-    {
-        slug: 'nus-flea-market',
-        title: 'NUS Flea Market',
-        description: 'A student marketplace app concept for easy second-hand exchange inside the NUS community.',
-        tag: 'Product',
-        summary: 'A mobile MVP for safe and convenient campus resale workflows.',
-        role: 'Project Lead / iOS Developer',
-        timeline: 'May 2023 - Aug 2023',
-        status: 'MVP'
     }
+    // {
+    //     slug: 'nus-flea-market',
+    //     title: 'NUS Flea Market',
+    //     description: 'A student marketplace app concept for easy second-hand exchange inside the NUS community.',
+    //     tag: 'Product',
+    //     summary: 'A mobile MVP for safe and convenient campus resale workflows.',
+    //     role: 'Project Lead / iOS Developer',
+    //     timeline: 'May 2023 - Aug 2023',
+    //     status: 'MVP'
+    // }
 ];
